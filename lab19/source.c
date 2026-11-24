@@ -103,13 +103,8 @@ void tabulation(FILE* ptr_file_name) {
 	printf("Введите конец интервала\n");
 	scanf("%d", &end);
 
-	fprintf(ptr_file_name, "-----------------------\n");
-	fprintf(ptr_file_name, "| %8s | %8s |\n", "x", "y");
-	fprintf(ptr_file_name, "-----------------------\n");
-
 	for (float i = start; i <= end; i += step) {
 
-		fprintf(ptr_file_name, "| %8.2f | %8.2f |\n", i, pow(i, 3) - 4 * pow(i, 2) + 2);
-		fprintf(ptr_file_name, "-----------------------\n");
+		fprintf(ptr_file_name, "%8.2f %8.2f\n", i, pow(i, 3) - 4 * pow(i, 2) + 2);
 	}
 }
